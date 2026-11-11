@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MunicipalServicesApp.UI;
 using MunicipalServicesApp.Models;
 using MunicipalServicesApp.Services;
 
@@ -18,6 +19,7 @@ namespace MunicipalServicesApp.Forms
         public ManageIssuesForm(IssueService service)
         {
             InitializeComponent();
+            Theme.Apply(this);
             issueService = service;
 
             LoadIssues();

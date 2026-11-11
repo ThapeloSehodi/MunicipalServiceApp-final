@@ -43,6 +43,7 @@
             this.lblRoads = new System.Windows.Forms.Label();
             this.btnViewDetails = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssues)).BeginInit();
+            this.appHeader = new MunicipalServicesApp.UI.AppHeader();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -54,11 +55,12 @@
             this.lblTitle.Size = new System.Drawing.Size(377, 31);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "SUBMITTED MUNICIPAL ISSUES";
+            this.lblTitle.Visible = false;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(72, 68);
+            this.lblSearch.Location = new System.Drawing.Point(72, 94);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(77, 13);
             this.lblSearch.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(75, 84);
+            this.txtSearch.Location = new System.Drawing.Point(75, 110);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(200, 20);
             this.txtSearch.TabIndex = 2;
@@ -75,7 +77,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnSearch.Location = new System.Drawing.Point(297, 84);
+            this.btnSearch.Location = new System.Drawing.Point(297, 110);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 23);
             this.btnSearch.TabIndex = 3;
@@ -86,7 +88,7 @@
             // btnShowAll
             // 
             this.btnShowAll.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnShowAll.Location = new System.Drawing.Point(412, 84);
+            this.btnShowAll.Location = new System.Drawing.Point(412, 110);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(87, 23);
             this.btnShowAll.TabIndex = 4;
@@ -100,7 +102,7 @@
             this.dgvIssues.AllowUserToDeleteRows = false;
             this.dgvIssues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIssues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIssues.Location = new System.Drawing.Point(75, 225);
+            this.dgvIssues.Location = new System.Drawing.Point(75, 251);
             this.dgvIssues.MultiSelect = false;
             this.dgvIssues.Name = "dgvIssues";
             this.dgvIssues.ReadOnly = true;
@@ -112,7 +114,7 @@
             // lblTotalIssues
             // 
             this.lblTotalIssues.AutoSize = true;
-            this.lblTotalIssues.Location = new System.Drawing.Point(75, 387);
+            this.lblTotalIssues.Location = new System.Drawing.Point(75, 413);
             this.lblTotalIssues.Name = "lblTotalIssues";
             this.lblTotalIssues.Size = new System.Drawing.Size(76, 13);
             this.lblTotalIssues.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(75, 415);
+            this.btnBack.Location = new System.Drawing.Point(75, 441);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 23);
             this.btnBack.TabIndex = 7;
@@ -131,7 +133,7 @@
             // lblTotalI
             // 
             this.lblTotalI.AutoSize = true;
-            this.lblTotalI.Location = new System.Drawing.Point(75, 121);
+            this.lblTotalI.Location = new System.Drawing.Point(75, 147);
             this.lblTotalI.Name = "lblTotalI";
             this.lblTotalI.Size = new System.Drawing.Size(76, 13);
             this.lblTotalI.TabIndex = 8;
@@ -140,7 +142,7 @@
             // lblSubmitted
             // 
             this.lblSubmitted.AutoSize = true;
-            this.lblSubmitted.Location = new System.Drawing.Point(158, 121);
+            this.lblSubmitted.Location = new System.Drawing.Point(158, 147);
             this.lblSubmitted.Name = "lblSubmitted";
             this.lblSubmitted.Size = new System.Drawing.Size(66, 13);
             this.lblSubmitted.TabIndex = 9;
@@ -149,7 +151,7 @@
             // lblHigh
             // 
             this.lblHigh.AutoSize = true;
-            this.lblHigh.Location = new System.Drawing.Point(239, 121);
+            this.lblHigh.Location = new System.Drawing.Point(239, 147);
             this.lblHigh.Name = "lblHigh";
             this.lblHigh.Size = new System.Drawing.Size(75, 13);
             this.lblHigh.TabIndex = 10;
@@ -158,7 +160,7 @@
             // lblUrgent
             // 
             this.lblUrgent.AutoSize = true;
-            this.lblUrgent.Location = new System.Drawing.Point(337, 121);
+            this.lblUrgent.Location = new System.Drawing.Point(337, 147);
             this.lblUrgent.Name = "lblUrgent";
             this.lblUrgent.Size = new System.Drawing.Size(51, 13);
             this.lblUrgent.TabIndex = 11;
@@ -167,7 +169,7 @@
             // lblRoads
             // 
             this.lblRoads.AutoSize = true;
-            this.lblRoads.Location = new System.Drawing.Point(78, 161);
+            this.lblRoads.Location = new System.Drawing.Point(78, 187);
             this.lblRoads.Name = "lblRoads";
             this.lblRoads.Size = new System.Drawing.Size(78, 13);
             this.lblRoads.TabIndex = 12;
@@ -175,7 +177,7 @@
             // 
             // btnViewDetails
             // 
-            this.btnViewDetails.Location = new System.Drawing.Point(351, 415);
+            this.btnViewDetails.Location = new System.Drawing.Point(351, 441);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(148, 23);
             this.btnViewDetails.TabIndex = 13;
@@ -183,12 +185,22 @@
             this.btnViewDetails.UseVisualStyleBackColor = true;
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
             // 
+            // appHeader
+            // 
+            this.appHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.appHeader.Location = new System.Drawing.Point(0, 0);
+            this.appHeader.Name = "appHeader";
+            this.appHeader.Size = new System.Drawing.Size(800, 72);
+            this.appHeader.Subtitle = "Review and search the issues you have reported";
+            this.appHeader.TabIndex = 99;
+            this.appHeader.Title = "Submitted Issues";
+            // 
             // ManageIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(238, 243, 248);
+            this.ClientSize = new System.Drawing.Size(800, 476);
             this.Controls.Add(this.btnViewDetails);
             this.Controls.Add(this.lblRoads);
             this.Controls.Add(this.lblUrgent);
@@ -203,6 +215,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.appHeader);
             this.Name = "ManageIssuesForm";
             this.Text = "Submitted Municipal Issues";
             this.Load += new System.EventHandler(this.ManageIssuesForm_Load);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.Label lblUrgent;
         private System.Windows.Forms.Label lblRoads;
         private System.Windows.Forms.Button btnViewDetails;
+        private MunicipalServicesApp.UI.AppHeader appHeader;
     }
 }

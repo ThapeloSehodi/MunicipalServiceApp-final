@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rtbDescription = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.appHeader = new MunicipalServicesApp.UI.AppHeader();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -56,6 +57,7 @@
             this.lblTitle.Size = new System.Drawing.Size(87, 13);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "ISSUE DETAILS";
+            this.lblTitle.Visible = false;
             // 
             // label2
             // 
@@ -211,10 +213,21 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // appHeader
+            // 
+            this.appHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.appHeader.Location = new System.Drawing.Point(0, 0);
+            this.appHeader.Name = "appHeader";
+            this.appHeader.Size = new System.Drawing.Size(800, 72);
+            this.appHeader.Subtitle = "Everything we know about this reported issue";
+            this.appHeader.TabIndex = 99;
+            this.appHeader.Title = "Issue Details";
+            // 
             // IssueDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(238, 243, 248);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.rtbDescription);
@@ -234,8 +247,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.appHeader);
             this.Name = "IssueDetailsForm";
-            this.Text = "IssueDetailsForm";
+            this.Text = "Issue Details";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +275,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbDescription;
         private System.Windows.Forms.Button btnClose;
+        private MunicipalServicesApp.UI.AppHeader appHeader;
     }
 }

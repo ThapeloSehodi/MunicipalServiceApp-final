@@ -50,6 +50,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnViewIssues = new System.Windows.Forms.Button();
+            this.appHeader = new MunicipalServicesApp.UI.AppHeader();
             this.grpReportDetails.SuspendLayout();
             this.grpDescription.SuspendLayout();
             this.grpAttachment.SuspendLayout();
@@ -65,6 +66,7 @@
             this.lblTitle.Size = new System.Drawing.Size(243, 28);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Report Municipal Issue";
+            this.lblTitle.Visible = false;
             // 
             // grpReportDetails
             // 
@@ -74,7 +76,7 @@
             this.grpReportDetails.Controls.Add(this.lblCategory);
             this.grpReportDetails.Controls.Add(this.txtLocation);
             this.grpReportDetails.Controls.Add(this.lblLocation);
-            this.grpReportDetails.Location = new System.Drawing.Point(45, 39);
+            this.grpReportDetails.Location = new System.Drawing.Point(45, 89);
             this.grpReportDetails.Name = "grpReportDetails";
             this.grpReportDetails.Size = new System.Drawing.Size(691, 110);
             this.grpReportDetails.TabIndex = 1;
@@ -138,7 +140,7 @@
             // 
             this.grpDescription.Controls.Add(this.lblCharacterCount);
             this.grpDescription.Controls.Add(this.rtbDescription);
-            this.grpDescription.Location = new System.Drawing.Point(45, 155);
+            this.grpDescription.Location = new System.Drawing.Point(45, 205);
             this.grpDescription.Name = "grpDescription";
             this.grpDescription.Size = new System.Drawing.Size(691, 129);
             this.grpDescription.TabIndex = 2;
@@ -168,7 +170,7 @@
             // 
             this.grpAttachment.Controls.Add(this.lblSelectedFile);
             this.grpAttachment.Controls.Add(this.btnAttach);
-            this.grpAttachment.Location = new System.Drawing.Point(45, 290);
+            this.grpAttachment.Location = new System.Drawing.Point(45, 340);
             this.grpAttachment.Name = "grpAttachment";
             this.grpAttachment.Size = new System.Drawing.Size(691, 52);
             this.grpAttachment.TabIndex = 3;
@@ -199,7 +201,7 @@
             this.grpProgress.Controls.Add(this.lblEncouragement);
             this.grpProgress.Controls.Add(this.lblProgress);
             this.grpProgress.Controls.Add(this.progressBarReport);
-            this.grpProgress.Location = new System.Drawing.Point(45, 348);
+            this.grpProgress.Location = new System.Drawing.Point(45, 398);
             this.grpProgress.Name = "grpProgress";
             this.grpProgress.Size = new System.Drawing.Size(709, 125);
             this.grpProgress.TabIndex = 4;
@@ -234,7 +236,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(52, 480);
+            this.btnSubmit.Location = new System.Drawing.Point(52, 530);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 5;
@@ -244,7 +246,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(181, 480);
+            this.btnClear.Location = new System.Drawing.Point(181, 530);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 6;
@@ -254,7 +256,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(473, 478);
+            this.btnExit.Location = new System.Drawing.Point(473, 528);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 23);
             this.btnExit.TabIndex = 7;
@@ -264,7 +266,7 @@
             // 
             // btnViewIssues
             // 
-            this.btnViewIssues.Location = new System.Drawing.Point(282, 478);
+            this.btnViewIssues.Location = new System.Drawing.Point(282, 528);
             this.btnViewIssues.Name = "btnViewIssues";
             this.btnViewIssues.Size = new System.Drawing.Size(117, 23);
             this.btnViewIssues.TabIndex = 8;
@@ -272,12 +274,22 @@
             this.btnViewIssues.UseVisualStyleBackColor = true;
             this.btnViewIssues.Click += new System.EventHandler(this.btnViewIssues_Click);
             // 
+            // appHeader
+            // 
+            this.appHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.appHeader.Location = new System.Drawing.Point(0, 0);
+            this.appHeader.Name = "appHeader";
+            this.appHeader.Size = new System.Drawing.Size(800, 72);
+            this.appHeader.Subtitle = "Tell your municipality about a problem in your area";
+            this.appHeader.TabIndex = 99;
+            this.appHeader.Title = "Report an Issue";
+            // 
             // ReportIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 506);
+            this.BackColor = System.Drawing.Color.FromArgb(238, 243, 248);
+            this.ClientSize = new System.Drawing.Size(800, 556);
             this.Controls.Add(this.btnViewIssues);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
@@ -287,8 +299,9 @@
             this.Controls.Add(this.grpDescription);
             this.Controls.Add(this.grpReportDetails);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.appHeader);
             this.Name = "ReportIssuesForm";
-            this.Text = "ReportIssuesForm";
+            this.Text = "Report an Issue";
             this.grpReportDetails.ResumeLayout(false);
             this.grpReportDetails.PerformLayout();
             this.grpDescription.ResumeLayout(false);
@@ -326,5 +339,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnViewIssues;
+        private MunicipalServicesApp.UI.AppHeader appHeader;
     }
 }

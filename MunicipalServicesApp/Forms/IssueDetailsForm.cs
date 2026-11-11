@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MunicipalServicesApp.UI;
 using System.IO;
 using MunicipalServicesApp.Models;
 
@@ -18,6 +19,7 @@ namespace MunicipalServicesApp.Forms
         public IssueDetailsForm(Issue selectedIssue)
         {
             InitializeComponent();
+            Theme.Apply(this);
 
             issue = selectedIssue;
 

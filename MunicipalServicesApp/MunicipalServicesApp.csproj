@@ -52,6 +52,12 @@
     <Compile Include="Forms\IssueDetailsForm.Designer.cs">
       <DependentUpon>IssueDetailsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LocalEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalEventsForm.Designer.cs">
+      <DependentUpon>LocalEventsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManageIssuesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,7 +70,21 @@
     <Compile Include="Forms\ReportIssuesForm.Designer.cs">
       <DependentUpon>ReportIssuesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ServiceRequestStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceRequestStatusForm.Designer.cs">
+      <DependentUpon>ServiceRequestStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generic\AvlTree.cs" />
+    <Compile Include="Generic\BinarySearchTree.cs" />
+    <Compile Include="Generic\BinaryTree.cs" />
+    <Compile Include="Generic\GeneralTree.cs" />
+    <Compile Include="Generic\Graph.cs" />
     <Compile Include="Generic\IssueManager.cs" />
+    <Compile Include="Generic\MinPriorityQueue.cs" />
+    <Compile Include="Generic\RedBlackTree.cs" />
+    <Compile Include="Generic\SearchTreeBase.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +92,38 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\EventRecommendation.cs" />
+    <Compile Include="Models\LocalEvent.cs" />
+    <Compile Include="Models\ServiceRequest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\IssueService.cs" />
+    <Compile Include="Services\ServiceRequestService.cs" />
+    <Compile Include="UI\AppHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Theme.cs" />
+    <Compile Include="UI\TileButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\IssueDetailsForm.resx">
       <DependentUpon>IssueDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LocalEventsForm.resx">
+      <DependentUpon>LocalEventsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageIssuesForm.resx">
       <DependentUpon>ManageIssuesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportIssuesForm.resx">
       <DependentUpon>ReportIssuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceRequestStatusForm.resx">
+      <DependentUpon>ServiceRequestStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

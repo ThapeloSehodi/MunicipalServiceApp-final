@@ -28,125 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnReportIssues = new System.Windows.Forms.Button();
-            this.btnEvents = new System.Windows.Forms.Button();
-            this.lblEventsComingSoon = new System.Windows.Forms.Button();
-            this.btnServiceStatus = new System.Windows.Forms.Button();
-            this.lblStatusComingSoon = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblWelcomeSub = new System.Windows.Forms.Label();
+            this.btnReportIssues = new MunicipalServicesApp.UI.TileButton();
+            this.btnEvents = new MunicipalServicesApp.UI.TileButton();
+            this.btnServiceStatus = new MunicipalServicesApp.UI.TileButton();
+            this.pnlSummary = new System.Windows.Forms.Panel();
+            this.lblSummary = new System.Windows.Forms.Label();
+            this.pnlTip = new System.Windows.Forms.Panel();
+            this.lblTip = new System.Windows.Forms.Label();
             this.lblFooter = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.appHeader = new MunicipalServicesApp.UI.AppHeader();
+            this.pnlSummary.SuspendLayout();
+            this.pnlTip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // lblWelcome
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTitle.Location = new System.Drawing.Point(298, 25);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(187, 20);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "MUNICIPAL SERVICES";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(30, 41, 54);
+            this.lblWelcome.Location = new System.Drawing.Point(24, 90);
+            this.lblWelcome.Text = "Welcome to the Citizen Service Portal";
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.TabIndex = 0;
             // 
-            // label1
+            // lblWelcomeSub
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Citizen Service Portal";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblWelcomeSub.AutoSize = true;
+            this.lblWelcomeSub.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeSub.ForeColor = System.Drawing.Color.FromArgb(98, 112, 128);
+            this.lblWelcomeSub.Location = new System.Drawing.Point(27, 126);
+            this.lblWelcomeSub.Text = "Choose a service below to get started.";
+            this.lblWelcomeSub.Name = "lblWelcomeSub";
+            this.lblWelcomeSub.TabIndex = 1;
             // 
             // btnReportIssues
             // 
-            this.btnReportIssues.Location = new System.Drawing.Point(268, 100);
-            this.btnReportIssues.Name = "btnReportIssues";
-            this.btnReportIssues.Size = new System.Drawing.Size(223, 23);
-            this.btnReportIssues.TabIndex = 2;
+            this.btnReportIssues.AccentColor = System.Drawing.Color.FromArgb(200, 62, 52);
+            this.btnReportIssues.Description = "Report potholes, leaks, outages and other municipal problems.";
+            this.btnReportIssues.IconText = "!";
+            this.btnReportIssues.Location = new System.Drawing.Point(25, 168);
+            this.btnReportIssues.Size = new System.Drawing.Size(270, 180);
             this.btnReportIssues.Text = "Report an Issue";
+            this.btnReportIssues.Title = "Report an Issue";
             this.btnReportIssues.UseVisualStyleBackColor = true;
+            this.btnReportIssues.Name = "btnReportIssues";
+            this.btnReportIssues.TabIndex = 2;
             this.btnReportIssues.Click += new System.EventHandler(this.btnReportIssues_Click);
             // 
             // btnEvents
             // 
-            this.btnEvents.Enabled = false;
-            this.btnEvents.Location = new System.Drawing.Point(302, 164);
-            this.btnEvents.Name = "btnEvents";
-            this.btnEvents.Size = new System.Drawing.Size(161, 23);
-            this.btnEvents.TabIndex = 3;
-            this.btnEvents.Text = "Local Events & Announcements";
+            this.btnEvents.AccentColor = System.Drawing.Color.FromArgb(12, 74, 110);
+            this.btnEvents.Description = "Browse, search and get recommendations for local events.";
+            this.btnEvents.IconText = "★";
+            this.btnEvents.Location = new System.Drawing.Point(307, 168);
+            this.btnEvents.Size = new System.Drawing.Size(270, 180);
+            this.btnEvents.Text = "Events & Announcements";
+            this.btnEvents.Title = "Events & Announcements";
             this.btnEvents.UseVisualStyleBackColor = true;
-            // 
-            // lblEventsComingSoon
-            // 
-            this.lblEventsComingSoon.Location = new System.Drawing.Point(336, 225);
-            this.lblEventsComingSoon.Name = "lblEventsComingSoon";
-            this.lblEventsComingSoon.Size = new System.Drawing.Size(89, 23);
-            this.lblEventsComingSoon.TabIndex = 4;
-            this.lblEventsComingSoon.Text = "Coming Soon";
-            this.lblEventsComingSoon.UseVisualStyleBackColor = true;
+            this.btnEvents.Name = "btnEvents";
+            this.btnEvents.TabIndex = 3;
+            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
             // 
             // btnServiceStatus
             // 
-            this.btnServiceStatus.Enabled = false;
-            this.btnServiceStatus.Location = new System.Drawing.Point(321, 276);
-            this.btnServiceStatus.Name = "btnServiceStatus";
-            this.btnServiceStatus.Size = new System.Drawing.Size(129, 23);
-            this.btnServiceStatus.TabIndex = 5;
+            this.btnServiceStatus.AccentColor = System.Drawing.Color.FromArgb(0, 122, 77);
+            this.btnServiceStatus.Description = "Track your service requests and see live progress updates.";
+            this.btnServiceStatus.IconText = "≡";
+            this.btnServiceStatus.Location = new System.Drawing.Point(589, 168);
+            this.btnServiceStatus.Size = new System.Drawing.Size(270, 180);
             this.btnServiceStatus.Text = "Service Request Status";
+            this.btnServiceStatus.Title = "Service Request Status";
             this.btnServiceStatus.UseVisualStyleBackColor = true;
+            this.btnServiceStatus.Name = "btnServiceStatus";
+            this.btnServiceStatus.TabIndex = 4;
+            this.btnServiceStatus.Click += new System.EventHandler(this.btnServiceStatus_Click);
             // 
-            // lblStatusComingSoon
+            // pnlSummary
             // 
-            this.lblStatusComingSoon.AutoSize = true;
-            this.lblStatusComingSoon.Location = new System.Drawing.Point(355, 322);
-            this.lblStatusComingSoon.Name = "lblStatusComingSoon";
-            this.lblStatusComingSoon.Size = new System.Drawing.Size(70, 13);
-            this.lblStatusComingSoon.TabIndex = 6;
-            this.lblStatusComingSoon.Text = "Coming Soon";
+            this.pnlSummary.Controls.Add(this.lblSummary);
+            this.pnlSummary.BackColor = System.Drawing.Color.White;
+            this.pnlSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSummary.Location = new System.Drawing.Point(25, 370);
+            this.pnlSummary.Size = new System.Drawing.Size(834, 52);
+            this.pnlSummary.Name = "pnlSummary";
+            this.pnlSummary.TabIndex = 5;
             // 
-            // btnExit
+            // lblSummary
             // 
-            this.btnExit.Location = new System.Drawing.Point(358, 362);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.lblSummary.AutoSize = true;
+            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(12, 74, 110);
+            this.lblSummary.Location = new System.Drawing.Point(16, 16);
+            this.lblSummary.Text = "Loading summary...";
+            this.lblSummary.Name = "lblSummary";
+            this.lblSummary.TabIndex = 6;
+            // 
+            // pnlTip
+            // 
+            this.pnlTip.Controls.Add(this.lblTip);
+            this.pnlTip.BackColor = System.Drawing.Color.FromArgb(255, 248, 225);
+            this.pnlTip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTip.Location = new System.Drawing.Point(25, 436);
+            this.pnlTip.Size = new System.Drawing.Size(834, 52);
+            this.pnlTip.Name = "pnlTip";
+            this.pnlTip.TabIndex = 7;
+            // 
+            // lblTip
+            // 
+            this.lblTip.AutoSize = true;
+            this.lblTip.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTip.ForeColor = System.Drawing.Color.FromArgb(90, 70, 0);
+            this.lblTip.Location = new System.Drawing.Point(16, 16);
+            this.lblTip.Text = "Tip: every issue you report is added to Service Request Status, so you can follow its progress.";
+            this.lblTip.Name = "lblTip";
+            this.lblTip.TabIndex = 8;
             // 
             // lblFooter
             // 
             this.lblFooter.AutoSize = true;
-            this.lblFooter.Location = new System.Drawing.Point(299, 417);
-            this.lblFooter.Name = "lblFooter";
-            this.lblFooter.Size = new System.Drawing.Size(217, 13);
-            this.lblFooter.TabIndex = 8;
+            this.lblFooter.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(98, 112, 128);
+            this.lblFooter.Location = new System.Drawing.Point(25, 520);
             this.lblFooter.Text = "Municipal Services Application | South Africa";
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.TabIndex = 9;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9.0F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(759, 510);
+            this.btnExit.Size = new System.Drawing.Size(100, 32);
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // appHeader
+            // 
+            this.appHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.appHeader.Location = new System.Drawing.Point(0, 0);
+            this.appHeader.Size = new System.Drawing.Size(884, 72);
+            this.appHeader.Subtitle = "Your gateway to municipal services in South Africa";
+            this.appHeader.Title = "Municipal Services";
+            this.appHeader.Name = "appHeader";
+            this.appHeader.TabIndex = 11;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(238, 243, 248);
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.lblFooter);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.lblStatusComingSoon);
-            this.Controls.Add(this.btnServiceStatus);
-            this.Controls.Add(this.lblEventsComingSoon);
-            this.Controls.Add(this.btnEvents);
-            this.Controls.Add(this.btnReportIssues);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Municipal Services Application";
+            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.lblWelcomeSub);
+            this.Controls.Add(this.btnReportIssues);
+            this.Controls.Add(this.btnEvents);
+            this.Controls.Add(this.btnServiceStatus);
+            this.Controls.Add(this.pnlSummary);
+            this.Controls.Add(this.pnlTip);
+            this.Controls.Add(this.lblFooter);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.appHeader);
+            this.Name = "MainForm";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
+            this.pnlTip.ResumeLayout(false);
+            this.pnlSummary.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,15 +208,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnReportIssues;
-        private System.Windows.Forms.Button btnEvents;
-        private System.Windows.Forms.Button lblEventsComingSoon;
-        private System.Windows.Forms.Button btnServiceStatus;
-        private System.Windows.Forms.Label lblStatusComingSoon;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblWelcomeSub;
+        private MunicipalServicesApp.UI.TileButton btnReportIssues;
+        private MunicipalServicesApp.UI.TileButton btnEvents;
+        private MunicipalServicesApp.UI.TileButton btnServiceStatus;
+        private System.Windows.Forms.Panel pnlSummary;
+        private System.Windows.Forms.Label lblSummary;
+        private System.Windows.Forms.Panel pnlTip;
+        private System.Windows.Forms.Label lblTip;
         private System.Windows.Forms.Label lblFooter;
+        private System.Windows.Forms.Button btnExit;
+        private MunicipalServicesApp.UI.AppHeader appHeader;
     }
 }
-
